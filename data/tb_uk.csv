@@ -1,0 +1,24 @@
+nominal_code,description,cost_centre,txn_currency,txn_amount,balance
+1200,Bank - Barclays GBP,,GBP,,1240000
+1210,Bank - DBS SGD,,SGD,40000,23010
+1100,Debtors control,,GBP,,1985000
+1001,Stock,,GBP,,640000
+1103,Prepayments,,GBP,,95000
+30,Plant and machinery - cost,,GBP,,2900000
+31,Plant and machinery - depreciation,,GBP,,-1060000
+2100,Creditors control,,GBP,,-1210000
+2150,Due to Northwind Inc,,USD,-629840,-490707.72
+2109,Accruals,,GBP,,-41500
+2310,Deferred income,,GBP,,-180000
+2202,Corporation tax,,GBP,,-215000
+3000,Share capital,,GBP,,-1000000
+3200,Profit and loss reserve,,GBP,,-1641510
+4000,Sales,,GBP,,-9850000
+5000,Cost of sales,,GBP,,5120000
+7000,Gross wages,CC-OPS,GBP,,812500
+7000,Gross wages,CC-SALES,GBP,,812500
+7100,Rent,,GBP,,310000
+8000,Depreciation,,GBP,,290000
+8210,Management charges - Northwind Inc,,GBP,,490707.72
+7500,General overheads,,GBP,,640000
+9500,Corporation tax charge,,GBP,,330000
