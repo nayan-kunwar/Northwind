@@ -3,7 +3,7 @@
   "entity": "Northwind Group",
   "as_of": "2024-12-31",
   "currency": "GBP",
-  "basis": "Consolidated, translated at the rates in fx_rates.csv; GBP rounded to 2 decimals.",
+  "basis": "Consolidated, translated at the rates in fx_rates.csv; GBP rounded to 2 decimals. Totals are computed at full precision; the sum of rounded lines may differ by GBP 0.01.",
   "assets": {
     "non_current": [
       {

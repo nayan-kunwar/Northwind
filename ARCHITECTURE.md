@@ -11,7 +11,7 @@ control.** The prototype is a compact version of that rule. The production topol
 the same rule and adds the operational pieces a real group close needs: adapters, an
 evidence store, approvals, versioning and a review console.
 
-The arithmetic core is deliberately small: about 1,500 lines of Python using only the
+The arithmetic core is deliberately small: about 2,600 lines of Python using only the
 standard library (`decimal`, `csv`, `json`). It ingests three ERP formats, validates
 mappings, triages 20 journals, translates three currencies, eliminates intercompany,
 computes NCI, goodwill and the translation reserve, and writes the required outputs. The

@@ -25,7 +25,7 @@
     {
       "check": "consolidated_tb_sums_to_zero",
       "passed": true,
-      "detail": "sum of consolidated TB rows = -0.01 GBP"
+      "detail": "sum of consolidated TB rows = 0.00 GBP"
     },
     {
       "check": "balance_sheet_balances",

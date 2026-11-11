@@ -55,7 +55,7 @@ The run is deterministic: no timestamps, random values or network calls are writ
 ## Checks and tests
 
 ```bash
-# 20 unit and structural tests, including every control figure
+# 28 unit, structural, regression and reproducibility tests
 python -m unittest discover -s tests -v
 
 # Independent recomputation of the control figures without importing northwind/

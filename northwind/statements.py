@@ -141,6 +141,24 @@ def build_consolidated_tb(
             }
         )
 
+    # The account-level rows can differ from the full-precision total by a cent
+    # because each is rounded. Add a transparent presentation rounding row so
+    # the TB sums to exactly zero.
+    total = sum((row["amount_gbp"] for row in rows), D(0))
+    if total != 0:
+        rows.append(
+            {
+                "group_account": "3999",
+                "account_name": "Rounding (presentation)",
+                "account_type": "Rounding",
+                "statement": "BS",
+                "amount_gbp": -total,
+                "debit_gbp": -total if total < 0 else D(0),
+                "credit_gbp": total if total > 0 else D(0),
+                "source_rows": "rounding of presented account balances",
+            }
+        )
+
     # Order: assets, liabilities, equity, then P&L (the reader can see the
     # pre-closing TB sum to zero).
     order = {"Asset": 0, "Liability": 1, "Equity": 2, "Revenue": 3, "Expense": 4}
@@ -247,7 +265,10 @@ def build_balance_sheet(
         "entity": "Northwind Group",
         "as_of": config.FY_END,
         "currency": config.PRESENTATION_CURRENCY,
-        "basis": "Consolidated, translated at the rates in fx_rates.csv; GBP rounded to 2 decimals.",
+        "basis": (
+            "Consolidated, translated at the rates in fx_rates.csv; GBP rounded to 2 decimals. "
+            "Totals are computed at full precision; the sum of rounded lines may differ by GBP 0.01."
+        ),
         "assets": {
             "non_current": non_current_assets,
             "current": current_assets,
