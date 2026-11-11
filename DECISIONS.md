@@ -74,7 +74,7 @@ The AI initially accepted the mapping file at face value. The validation check c
 
 **Choice**
 
-(b). US recorded five management-fee invoices totalling 640,000 USD; UK recorded only four (629,840 USD). The missing invoice `INV-US-2291` (10,160 USD) is in transit and is recorded by UK at the closing rate: 8,108.54 GBP. The UK USD payable is retranslated at closing, producing an FX loss of 11,957.88 GBP. The total difference of **20,066.42 GBP** is split into **8,108.54 timing + 11,957.88 FX**. The remaining P&L elimination difference of 1,966.21 GBP goes to group account 7300.
+(b). US recorded five management-fee invoices totalling 640,000 USD; UK recorded only four (629,840 USD). The missing invoice `INV-US-2291` (10,160 USD) is in transit and is recorded by UK at the closing rate: 8,108.54 GBP. The UK USD payable is retranslated at closing, producing an FX loss of 11,957.88 GBP. The total difference of **20,066.42 GBP** is split into **8,108.54 timing + 11,957.88 FX**. The remaining P&L elimination difference of 1,966.21 GBP goes to group account 7300 **as a credit (gain)**: eliminating IC income of 500,782.47 against IC expense of 498,816.26 leaves a 1,966.21 credit, so group profit stays equal to the sum of the entity profits (2,814,702.82). Treating it as an expense would reduce profit and break the balance sheet.
 
 **Trade-off**
 
@@ -94,6 +94,8 @@ The AI initially treated the 20,066.42 difference as a single unexplained interc
 **Choice**
 
 (b). India's group P&L includes H2 only: revenue of 437.0m INR and profit of 37.75m INR after posted journals. The H1 profit of 18.0m INR is part of the net assets at acquisition (678m INR), not group profit. Assets and liabilities are translated at the 31 December closing rate (GBP/INR 107.28186); P&L at the H2 average (107.7918); goodwill and NCI at the acquisition spot (105.446655). NCI is 20% of net assets at closing. Goodwill is INR 147.6m, retranslated at closing to 1,375,815.07 GBP.
+
+The UK and India investments are eliminated at **historical cost** (UK GBP 1,000,000; India at the 1 July 2024 spot consideration GBP 6,543,593.06), not at their closing-rate carrying amounts; the investments are non-monetary assets and their closing-rate differences are not group assets. The translation reserve movement is the balance-sheet residual and is decomposed into the US parent's operating net assets (+154,486.87), the India owners' share (-86,660.68) and goodwill retranslation (-23,944.83), with a GBP 0.01 rounding line.
 
 **Trade-off**
 
