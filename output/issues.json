@@ -1,10 +1,10 @@
 {
   "bundle_id": "NWG-D0BC",
-  "count": 19,
+  "count": 20,
   "actions": {
     "assumed": 5,
     "blocked": 4,
-    "flagged": 10
+    "flagged": 11
   },
   "issues": [
     {
@@ -123,6 +123,19 @@
       "currency": "INR",
       "action": "flagged",
       "reason": "Possible duplicate: the monthly India P&L already includes IN-DEP for 2024-12 (INR 3,240,000.00)."
+    },
+    {
+      "id": "BS-CLASSIFICATION",
+      "severity": "info",
+      "category": "presentation_assumption",
+      "file": "data/group_coa.csv",
+      "line": 17,
+      "entity": "Group",
+      "account": "2500",
+      "amount": null,
+      "currency": "GBP",
+      "action": "flagged",
+      "reason": "The trial balances do not split borrowings by maturity. Account 2500 is presented as non-current and all other liabilities as current. This is a presentation assumption only; total assets, total liabilities and total equity are unaffected."
     },
     {
       "id": "IC-DIFFERENCE",

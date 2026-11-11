@@ -180,7 +180,7 @@ Outputs written to output
   journals                       13 posted / 4 rejected / 3 held
 
 Validation: PASS (15/15 checks)
-Issues: 19
+Issues: 20
 ```
 
 The 28-test suite passes, the independent check passes, and two consecutive runs are

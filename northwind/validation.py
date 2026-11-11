@@ -192,6 +192,26 @@ def add_structural_issues(
         ),
     )
 
+    # Balance sheet classification
+    issues.add(
+        issue_id="BS-CLASSIFICATION",
+        severity="info",
+        category="presentation_assumption",
+        file="data/group_coa.csv",
+        line=17,
+        entity="Group",
+        account="2500",
+        amount=None,
+        currency="GBP",
+        action="flagged",
+        reason=(
+            "The trial balances do not split borrowings by maturity. Account 2500 is "
+            "presented as non-current and all other liabilities as current. This is a "
+            "presentation assumption only; total assets, total liabilities and total "
+            "equity are unaffected."
+        ),
+    )
+
     # Opening equity
     issues.add(
         issue_id="OPENING-EQUITY",

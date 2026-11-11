@@ -280,6 +280,11 @@ def build_balance_sheet(
             "total_liabilities": float(q2(total_liabilities)),
         },
         "equity": equity,
+        "notes": [
+            "The trial balances do not split borrowings by maturity; account 2500 is presented as non-current. All other liabilities are presented as current.",
+            "The SGD bank balance is carried at its booked GBP 23,010; see issues.json FX-UK-SGD-CLOSING.",
+            "Totals are computed at full precision; the sum of rounded lines may differ by GBP 0.01.",
+        ],
         "checks": {
             "assets_less_liabilities": float(q2(total_assets - total_liabilities)),
             "total_equity": float(q2(total_equity)),

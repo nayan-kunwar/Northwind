@@ -52,7 +52,7 @@ Outputs written to C:\N-Nayan\Projects\Northwind_TakeHome_v2\output
   journals                       13 posted / 4 rejected / 3 held
 
 Validation: PASS (15/15 checks)
-Issues: 19 (see output/issues.json)
+Issues: 20 (see output/issues.json)
 ```
 
 ## Tests
@@ -102,12 +102,12 @@ from the final run:
 
 ```
 4b6b4d6afe1cb5a8c74d20012e8879677e0322a0cb760703de5171a635dc05d9 *output/control_figures_nk.json
-291914a65ef7ed6321a4eaa61efd22a7ec5e75f703efb33349ab4c31cd629558 *output/balance_sheet.json
+b0b3f2b183591baf9165499d1ce2841af2523c6100dae19cb2d38ebbe88ec89f *output/balance_sheet.json
 030e52a1b2d7c46c5080f9a53eff5a639c723fb82f1abdb659bc2ffc20f32ab1 *output/profit_and_loss.json
 b106be146f7731633b1a20cbe3304193593bfffaf8a025538c59f47d8aa7c56c *output/changes_in_equity.json
 4ddfbc1d77bf5a192d15949be347313fd24a2b92a4819789ed7878cbfa3e9e05 *output/consolidated_tb.csv
 2d4d1d4eb30ade3fccd21f23e10a1af205888a6f8a364431209b9f9e664e8df3 *output/eliminations.csv
-321541d50159d4c2aea974609d670c6c6104c8a4b90078ad6b30d474789c445a *output/issues.json
+30d4c75f9bf797d8ddd4a02b99a7a709273fff56cfe10700695571ec2a9a3a04 *output/issues.json
 ```
 
 ## Output inventory
