@@ -1,0 +1,54 @@
+{
+  "bundle_id": "NWG-D0BC",
+  "entity": "Northwind Group",
+  "period": "2024-01-01 to 2024-12-31",
+  "currency": "GBP",
+  "opening": {
+    "share_capital": 1250000.0,
+    "retained_earnings": 12604747.93,
+    "translation_reserve": 412350.0,
+    "non_controlling_interest": 0.0,
+    "total": 14267097.93,
+    "source_rows": [
+      "data/prior_year_group.csv:2-5"
+    ]
+  },
+  "profit_for_the_year": {
+    "owners_of_the_parent": 2744660.39,
+    "non_controlling_interest": 70042.43,
+    "total": 2814702.82
+  },
+  "other_comprehensive_income": {
+    "translation_reserve_movement": 43881.36,
+    "nci_share_of_translation": -21665.17,
+    "total": 22216.19,
+    "source_rows": [
+      "translation reserve workings",
+      "ELIM-06",
+      "ELIM-07"
+    ]
+  },
+  "transactions_with_owners": {
+    "nci_recognised_on_india_acquisition": 1285958.29,
+    "source_rows": [
+      "data/acquisition_note.md:10-14",
+      "ELIM-04"
+    ]
+  },
+  "closing": {
+    "share_capital": 1250000.0,
+    "retained_earnings": 15349408.32,
+    "translation_reserve": 456231.36,
+    "non_controlling_interest": 1334335.55,
+    "total": 18389975.22,
+    "rounding": -0.01
+  },
+  "workings": {
+    "us_parent_operating_net_assets": 154486.87,
+    "india_net_assets_owners_share": -86660.68,
+    "india_goodwill_retranslation": -23944.83,
+    "analytical_total": 43881.36,
+    "balance_sheet_residual": 43881.36,
+    "rounding": -0.01
+  }
+}

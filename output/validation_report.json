@@ -1,0 +1,81 @@
+{
+  "bundle_id": "NWG-D0BC",
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "entity_tb_balances_US",
+      "passed": true,
+      "detail": "US trial balance signed total = 0.00 USD"
+    },
+    {
+      "check": "entity_tb_balances_UK",
+      "passed": true,
+      "detail": "UK trial balance signed total = 0.00 GBP"
+    },
+    {
+      "check": "entity_tb_balances_IN",
+      "passed": true,
+      "detail": "IN trial balance signed total = 0.00 INR"
+    },
+    {
+      "check": "posted_journals_balance",
+      "passed": true,
+      "detail": "13 posted journals checked; unbalanced: none"
+    },
+    {
+      "check": "consolidated_tb_sums_to_zero",
+      "passed": true,
+      "detail": "sum of consolidated TB rows = -0.01 GBP"
+    },
+    {
+      "check": "balance_sheet_balances",
+      "passed": true,
+      "detail": "assets 28,551,245.74 - liabilities 10,161,270.51 - equity 18,389,975.22 = 0.00"
+    },
+    {
+      "check": "profit_attribution",
+      "passed": true,
+      "detail": "owners 2,744,660.39 + NCI 70,042.43 = 2,814,702.82"
+    },
+    {
+      "check": "intercompany_reconciles",
+      "passed": true,
+      "detail": "US AR 510,774.14 vs UK AP 490,707.72 + in-transit 8,108.54 + FX 11,957.88; residual 0.00"
+    },
+    {
+      "check": "subledger_controls",
+      "passed": true,
+      "detail": "UK: AR 45,000.00, AP 45,000.00 GBP"
+    },
+    {
+      "check": "india_h2_only",
+      "passed": true,
+      "detail": "48 India P&L source rows from in_pl_monthly.csv; all are 2024-07 to 2024-12"
+    },
+    {
+      "check": "fx_rates_present",
+      "passed": true,
+      "detail": "all 8 required direct rates present; GBP/SGD closing absent by design"
+    },
+    {
+      "check": "control_group_revenue",
+      "passed": true,
+      "detail": "control 28,301,607.81 vs engine 28,301,607.81"
+    },
+    {
+      "check": "control_total_assets",
+      "passed": true,
+      "detail": "control 28,551,245.74 vs engine 28,551,245.74"
+    },
+    {
+      "check": "control_total_equity",
+      "passed": true,
+      "detail": "control 18,389,975.22 vs engine 18,389,975.22"
+    },
+    {
+      "check": "control_translation_reserve",
+      "passed": true,
+      "detail": "control 43,881.36 vs engine 43,881.36"
+    }
+  ]
+}

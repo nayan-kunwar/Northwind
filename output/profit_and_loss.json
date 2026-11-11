@@ -1,0 +1,201 @@
+{
+  "bundle_id": "NWG-D0BC",
+  "entity": "Northwind Group",
+  "period": "2024-01-01 to 2024-12-31",
+  "currency": "GBP",
+  "revenue": [
+    {
+      "entity": "US",
+      "account": "4100",
+      "name": "Revenue",
+      "amount_gbp": 14397496.09,
+      "source_rows": [
+        "data/tb_us.csv:18 [US]"
+      ]
+    },
+    {
+      "entity": "UK",
+      "account": "4100",
+      "name": "Revenue",
+      "amount_gbp": 9850000.0,
+      "source_rows": [
+        "data/tb_uk.csv:16 [UK]"
+      ]
+    },
+    {
+      "entity": "IN",
+      "account": "4100",
+      "name": "Revenue",
+      "amount_gbp": 4054111.72,
+      "source_rows": [
+        "data/in_pl_monthly.csv:5 [2024-07] [IN]",
+        "data/in_pl_monthly.csv:6 [2024-08] [IN]",
+        "data/in_pl_monthly.csv:7 [2024-09] [IN]",
+        "data/in_pl_monthly.csv:8 [2024-10] [IN]",
+        "data/in_pl_monthly.csv:9 [2024-11] [IN]",
+        "data/in_pl_monthly.csv:10 [2024-12] [IN]"
+      ]
+    }
+  ],
+  "revenue_total": 28301607.81,
+  "cost_of_sales": {
+    "account": "5100",
+    "name": "Cost of sales",
+    "amount_gbp": 15216592.61,
+    "source_rows": [
+      "data/tb_us.csv:20 [US]",
+      "data/adjustments.json:64 (JE-004) [US]",
+      "data/tb_uk.csv:17 [UK]",
+      "data/in_pl_monthly.csv:14 [2024-07] [IN]",
+      "data/in_pl_monthly.csv:15 [2024-08] [IN]",
+      "data/in_pl_monthly.csv:16 [2024-09] [IN]",
+      "data/in_pl_monthly.csv:17 [2024-10] [IN]",
+      "data/in_pl_monthly.csv:18 [2024-11] [IN]",
+      "data/in_pl_monthly.csv:19 [2024-12] [IN]",
+      "data/adjustments.json:275 (JE-015) [IN]"
+    ],
+    "note": ""
+  },
+  "gross_profit": 13085015.2,
+  "operating_expenses": [
+    {
+      "account": "6100",
+      "name": "Staff costs",
+      "amount_gbp": 5377709.98,
+      "source_rows": [
+        "data/tb_us.csv:21 [US]",
+        "data/adjustments.json:7 (JE-001) [US]",
+        "data/tb_uk.csv:18 [UK]",
+        "data/tb_uk.csv:19 [UK]",
+        "data/in_pl_monthly.csv:23 [2024-07] [IN]",
+        "data/in_pl_monthly.csv:24 [2024-08] [IN]",
+        "data/in_pl_monthly.csv:25 [2024-09] [IN]",
+        "data/in_pl_monthly.csv:26 [2024-10] [IN]",
+        "data/in_pl_monthly.csv:27 [2024-11] [IN]",
+        "data/in_pl_monthly.csv:28 [2024-12] [IN]",
+        "data/adjustments.json:237 (JE-013) [IN]"
+      ],
+      "note": ""
+    },
+    {
+      "account": "6200",
+      "name": "Rent and occupancy",
+      "amount_gbp": 789466.86,
+      "source_rows": [
+        "data/tb_us.csv:22 [US]",
+        "data/tb_uk.csv:20 [UK]",
+        "data/adjustments.json:180 (JE-010) [UK]",
+        "data/in_pl_monthly.csv:32 [2024-07] [IN]",
+        "data/in_pl_monthly.csv:33 [2024-08] [IN]",
+        "data/in_pl_monthly.csv:34 [2024-09] [IN]",
+        "data/in_pl_monthly.csv:35 [2024-10] [IN]",
+        "data/in_pl_monthly.csv:36 [2024-11] [IN]",
+        "data/in_pl_monthly.csv:37 [2024-12] [IN]"
+      ],
+      "note": ""
+    },
+    {
+      "account": "6400",
+      "name": "Depreciation",
+      "amount_gbp": 989160.73,
+      "source_rows": [
+        "data/tb_us.csv:23 [US]",
+        "data/adjustments.json:26 (JE-002) [US]",
+        "data/tb_uk.csv:21 [UK]",
+        "data/adjustments.json:142 (JE-008) [UK]",
+        "data/in_pl_monthly.csv:41 [2024-07] [IN]",
+        "data/in_pl_monthly.csv:42 [2024-08] [IN]",
+        "data/in_pl_monthly.csv:43 [2024-09] [IN]",
+        "data/in_pl_monthly.csv:44 [2024-10] [IN]",
+        "data/in_pl_monthly.csv:45 [2024-11] [IN]",
+        "data/in_pl_monthly.csv:46 [2024-12] [IN]"
+      ],
+      "note": ""
+    },
+    {
+      "account": "6500",
+      "name": "Other operating expenses",
+      "amount_gbp": 1776713.25,
+      "source_rows": [
+        "data/tb_us.csv:24 [US]",
+        "data/adjustments.json:45 (JE-003) [US]",
+        "data/adjustments.json:256 (JE-014) [US]",
+        "data/tb_uk.csv:23 [UK]",
+        "data/adjustments.json:123 (JE-007) [UK]",
+        "data/adjustments.json:199 (JE-011) [UK]",
+        "data/in_pl_monthly.csv:50 [2024-07] [IN]",
+        "data/in_pl_monthly.csv:51 [2024-08] [IN]",
+        "data/in_pl_monthly.csv:52 [2024-09] [IN]",
+        "data/in_pl_monthly.csv:53 [2024-10] [IN]",
+        "data/in_pl_monthly.csv:54 [2024-11] [IN]",
+        "data/in_pl_monthly.csv:55 [2024-12] [IN]",
+        "data/adjustments.json:218 (JE-012) [IN]",
+        "data/adjustments.json:275 (JE-015) [IN]"
+      ],
+      "note": ""
+    }
+  ],
+  "operating_expenses_total": 8933050.82,
+  "operating_profit": 4151964.38,
+  "finance_costs": {
+    "account": "7100",
+    "name": "Finance costs",
+    "amount_gbp": 275531.78,
+    "source_rows": [
+      "data/tb_us.csv:25 [US]",
+      "data/adjustments.json:83 (JE-005) [US]",
+      "data/in_pl_monthly.csv:59 [2024-07] [IN]",
+      "data/in_pl_monthly.csv:60 [2024-08] [IN]",
+      "data/in_pl_monthly.csv:61 [2024-09] [IN]",
+      "data/in_pl_monthly.csv:62 [2024-10] [IN]",
+      "data/in_pl_monthly.csv:63 [2024-11] [IN]",
+      "data/in_pl_monthly.csv:64 [2024-12] [IN]"
+    ],
+    "note": ""
+  },
+  "foreign_exchange": {
+    "account": "7300",
+    "name": "Foreign exchange gains and losses",
+    "amount_gbp": 9991.67,
+    "source_rows": [
+      "data/tb_uk.csv:10 (USD -629,840); data/fx_rates.csv:6 (GBP/USD closing) [UK]",
+      "ELIM-02"
+    ],
+    "note": ""
+  },
+  "profit_before_tax": 3866440.93,
+  "income_tax": {
+    "account": "8100",
+    "name": "Income tax expense",
+    "amount_gbp": 1051738.12,
+    "source_rows": [
+      "data/tb_us.csv:26 [US]",
+      "data/tb_uk.csv:24 [UK]",
+      "data/in_pl_monthly.csv:68 [2024-07] [IN]",
+      "data/in_pl_monthly.csv:69 [2024-08] [IN]",
+      "data/in_pl_monthly.csv:70 [2024-09] [IN]",
+      "data/in_pl_monthly.csv:71 [2024-10] [IN]",
+      "data/in_pl_monthly.csv:72 [2024-11] [IN]",
+      "data/in_pl_monthly.csv:73 [2024-12] [IN]"
+    ],
+    "note": ""
+  },
+  "rounding": 0.01,
+  "profit_for_the_year": 2814702.82,
+  "attributable_to": {
+    "owners_of_the_parent": 2744660.39,
+    "non_controlling_interest": 70042.43,
+    "rounding": 0.0
+  },
+  "eliminated": {
+    "intercompany_income": 500782.47,
+    "intercompany_expense": 498816.26,
+    "difference_to_7300": 1966.21
+  },
+  "notes": [
+    "Revenue is external revenue only; intercompany management fee income and expense are eliminated in full.",
+    "The GBP 1,966.21 remaining intercompany difference is a credit to account 7300 under group policy 5.",
+    "Owners' profit is the residual of the rounded group profit less rounded NCI profit; the full-precision owners' share is GBP 2,744,660.3813.",
+    "A GBP 0.01 rounding line reconciles the rounded profit-before-tax less tax to the full-precision rounded profit for the year."
+  ]
+}

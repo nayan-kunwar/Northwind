@@ -1,0 +1,219 @@
+{
+  "bundle_id": "NWG-D0BC",
+  "entity": "Northwind Group",
+  "as_of": "2024-12-31",
+  "currency": "GBP",
+  "basis": "Consolidated, translated at the rates in fx_rates.csv; GBP rounded to 2 decimals.",
+  "assets": {
+    "non_current": [
+      {
+        "account": "1500",
+        "name": "Property, plant and equipment - cost",
+        "amount_gbp": 13174020.23,
+        "source_rows": [
+          "data/tb_us.csv:7 [US]",
+          "data/tb_uk.csv:7 [UK]",
+          "data/tb_in.csv:5 [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "1510",
+        "name": "Property, plant and equipment - accumulated depreciation",
+        "amount_gbp": -4145696.32,
+        "source_rows": [
+          "data/tb_us.csv:8 [US]",
+          "data/adjustments.json:26 (JE-002) [US]",
+          "data/tb_uk.csv:8 [UK]",
+          "data/adjustments.json:142 (JE-008) [UK]",
+          "data/tb_in.csv:6 [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "1700",
+        "name": "Goodwill",
+        "amount_gbp": 1375815.07,
+        "source_rows": [
+          "data/acquisition_note.md:6-14",
+          "ELIM-04",
+          "ELIM-07"
+        ],
+        "note": ""
+      }
+    ],
+    "current": [
+      {
+        "account": "1100",
+        "name": "Cash and cash equivalents",
+        "amount_gbp": 7810225.9,
+        "source_rows": [
+          "data/tb_us.csv:2 [US]",
+          "data/tb_uk.csv:2 [UK]",
+          "data/tb_uk.csv:3 [UK]",
+          "data/tb_in.csv:2 [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "1200",
+        "name": "Trade receivables",
+        "amount_gbp": 6620436.66,
+        "source_rows": [
+          "data/tb_us.csv:3 [US]",
+          "data/tb_uk.csv:4 [UK]",
+          "data/adjustments.json:199 (JE-011) [UK]",
+          "data/subledger_controls.csv:4-5 (UK AR/AP control difference) [UK]",
+          "data/tb_in.csv:3 [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "1300",
+        "name": "Inventory",
+        "amount_gbp": 3218502.18,
+        "source_rows": [
+          "data/tb_us.csv:5 [US]",
+          "data/adjustments.json:64 (JE-004) [US]",
+          "data/tb_uk.csv:5 [UK]",
+          "data/tb_in.csv:4 [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "1400",
+        "name": "Prepayments",
+        "amount_gbp": 497942.01,
+        "source_rows": [
+          "data/tb_us.csv:6 [US]",
+          "data/adjustments.json:45 (JE-003) [US]",
+          "data/tb_uk.csv:6 [UK]",
+          "data/adjustments.json:180 (JE-010) [UK]",
+          "data/tb_in.csv:7 [IN]"
+        ],
+        "note": ""
+      }
+    ],
+    "total_assets": 28551245.74
+  },
+  "liabilities": {
+    "current": [
+      {
+        "account": "2100",
+        "name": "Trade payables",
+        "amount_gbp": 4059779.23,
+        "source_rows": [
+          "data/tb_us.csv:11 [US]",
+          "data/tb_uk.csv:9 [UK]",
+          "data/subledger_controls.csv:4-5 (UK AR/AP control difference) [UK]",
+          "data/tb_in.csv:8 [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "2200",
+        "name": "Accruals",
+        "amount_gbp": 936367.05,
+        "source_rows": [
+          "data/tb_us.csv:12 [US]",
+          "data/adjustments.json:7 (JE-001) [US]",
+          "data/adjustments.json:83 (JE-005) [US]",
+          "data/adjustments.json:256 (JE-014) [US]",
+          "data/tb_uk.csv:11 [UK]",
+          "data/adjustments.json:123 (JE-007) [UK]",
+          "data/tb_in.csv:9 [IN]",
+          "data/adjustments.json:218 (JE-012) [IN]",
+          "data/adjustments.json:237 (JE-013) [IN]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "2300",
+        "name": "Deferred income",
+        "amount_gbp": 483272.15,
+        "source_rows": [
+          "data/tb_us.csv:13 [US]",
+          "data/tb_uk.csv:12 [UK]"
+        ],
+        "note": ""
+      },
+      {
+        "account": "2400",
+        "name": "Income tax payable",
+        "amount_gbp": 770007.16,
+        "source_rows": [
+          "data/tb_us.csv:14 [US]",
+          "data/tb_uk.csv:13 [UK]",
+          "data/tb_in.csv:10 [IN]"
+        ],
+        "note": ""
+      }
+    ],
+    "non_current": [
+      {
+        "account": "2500",
+        "name": "Borrowings",
+        "amount_gbp": 3911844.93,
+        "source_rows": [
+          "data/tb_us.csv:15 [US]",
+          "data/tb_in.csv:11 [IN]"
+        ],
+        "note": ""
+      }
+    ],
+    "total_liabilities": 10161270.51
+  },
+  "equity": {
+    "share_capital": {
+      "account": "3100",
+      "name": "Share capital",
+      "amount_gbp": 1250000.0,
+      "source_rows": [
+        "data/prior_year_group.csv:2"
+      ]
+    },
+    "retained_earnings": {
+      "account": "3200",
+      "name": "Retained earnings",
+      "amount_gbp": 15349408.32,
+      "source_rows": [
+        "data/prior_year_group.csv:3",
+        "profit_and_loss.json: profit attributable to owners"
+      ]
+    },
+    "translation_reserve": {
+      "account": "3300",
+      "name": "Translation reserve",
+      "amount_gbp": 456231.36,
+      "source_rows": [
+        "data/prior_year_group.csv:4",
+        "changes_in_equity.json: translation reserve movement"
+      ]
+    },
+    "equity_attributable_to_owners": {
+      "amount_gbp": 17055639.68
+    },
+    "non_controlling_interest": {
+      "account": "3400",
+      "name": "Non-controlling interest",
+      "amount_gbp": 1334335.55,
+      "source_rows": [
+        "data/acquisition_note.md:10-14",
+        "ELIM-04; ELIM-05; ELIM-06"
+      ]
+    },
+    "rounding": {
+      "amount_gbp": -0.01,
+      "note": "Owners' profit is presented as the residual of rounded group profit less rounded NCI profit; the full-precision share is GBP 2,744,660.3813. This 0.01 rounding line makes the equity components add to total equity."
+    },
+    "total_equity": {
+      "amount_gbp": 18389975.22
+    }
+  },
+  "checks": {
+    "assets_less_liabilities": 18389975.22,
+    "total_equity": 18389975.22,
+    "difference": 0.0,
+    "balanced": true
+  }
+}

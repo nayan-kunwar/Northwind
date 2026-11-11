@@ -1,0 +1,27 @@
+{
+  "bundle_id": "NWG-D0BC",
+  "currency": "GBP",
+  "group_revenue": 28301607.81,
+  "group_profit": 2814702.82,
+  "profit_owners": 2744660.39,
+  "profit_nci": 70042.43,
+  "nci_closing": 1334335.55,
+  "goodwill_closing": 1375815.07,
+  "translation_reserve_movement": 43881.36,
+  "total_assets": 28551245.74,
+  "total_equity": 18389975.22,
+  "intercompany_difference": 20066.42,
+  "intercompany_difference_causes": {
+    "in_transit_invoice_gbp": 8108.54,
+    "fx_retranslation_gbp": 11957.88,
+    "total_gbp": 20066.42
+  },
+  "sgd_bank_gbp": null,
+  "sgd_bank_gbp_reason": "No GBP/SGD closing rate and no USD/SGD rate to derive one. The SGD 40,000 bank balance is carried at its booked GBP 23,010; no closing-rate retranslation is possible without estimating a rate.",
+  "journals": {
+    "posted": 13,
+    "rejected": 4,
+    "held_for_review": 3,
+    "total": 20
+  }
+}
