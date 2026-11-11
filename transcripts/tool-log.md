@@ -19,13 +19,17 @@ No third-party packages are used by the engine or the tests.
 
 ```
 $ git log --oneline
+80a2ce8 fix: make the consolidated TB sum to zero and disclose presentation rounding
+c513131 chore: add generated output for review
+659514c data: add source bundle NWG-D0BC and assignment pack
+b1ef772 docs: add architecture, validation, reflection, README and AI transcripts
 1782fe3 test: lock the AI corrections with regression and reproducibility tests
 81ba780 feat: deterministic consolidation engine, outputs, and tests
 90a32fb chore: initialize repository
 ```
 
-The history is kept, not squashed. Later commits add the documentation, data bundle and
-final presentation fixes.
+The history is kept, not squashed. This is the history at the time of this log; the
+repository itself has the complete history.
 
 ## One-command run
 
@@ -98,10 +102,10 @@ from the final run:
 
 ```
 4b6b4d6afe1cb5a8c74d20012e8879677e0322a0cb760703de5171a635dc05d9 *output/control_figures_nk.json
-3475064257e6e1305d9f52bbf7703f977cae69e4986a4c7d8fa6995a912a7e72 *output/balance_sheet.json
+291914a65ef7ed6321a4eaa61efd22a7ec5e75f703efb33349ab4c31cd629558 *output/balance_sheet.json
 030e52a1b2d7c46c5080f9a53eff5a639c723fb82f1abdb659bc2ffc20f32ab1 *output/profit_and_loss.json
 b106be146f7731633b1a20cbe3304193593bfffaf8a025538c59f47d8aa7c56c *output/changes_in_equity.json
-d31ef0f0447733c9f77cf5859223dd133562f975498b593bbd5727ca6047d08c *output/consolidated_tb.csv
+4ddfbc1d77bf5a192d15949be347313fd24a2b92a4819789ed7878cbfa3e9e05 *output/consolidated_tb.csv
 2d4d1d4eb30ade3fccd21f23e10a1af205888a6f8a364431209b9f9e664e8df3 *output/eliminations.csv
 321541d50159d4c2aea974609d670c6c6104c8a4b90078ad6b30d474789c445a *output/issues.json
 ```
