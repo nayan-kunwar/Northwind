@@ -123,5 +123,5 @@ transcripts/              AI session record and tool log
 - `REFLECTION.md` — one page
 - `transcripts/` — the AI session record and tool log
 
-The assignment bundle ID **NWG-D0BC** is quoted in the submission email and in every
-generated output's `bundle_id` field.
+The assignment bundle ID **NWG-D0BC** is quoted in the submission email and in the JSON
+outputs' `bundle_id` field.
