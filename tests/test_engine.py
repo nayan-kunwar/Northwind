@@ -51,6 +51,7 @@ def build_model():
         "tbs": tbs,
         "journals": journal_rows,
         "ledgers": ledgers,
+        "mapping": mapping_result,
         "subledger": subledger,
         "monthly_in": monthly_in,
         "control": control_figures,
@@ -189,6 +190,82 @@ class StructuralTests(unittest.TestCase):
             any(
                 month in ref
                 for ref in refs
+                for month in ("2024-04", "2024-05", "2024-06")
+            )
+        )
+
+
+class RegressionTests(unittest.TestCase):
+    """Locks the corrections to mistakes made during the AI-assisted build."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.model = build_model()
+        cls.result = cls.model["result"]
+
+    def test_zero_padded_uk_accounts_are_mapped(self):
+        # The UK TB uses 30/31 while map_uk.csv uses 0030/0031. The first
+        # implementation missed both, understating assets by GBP 1,840,000.
+        uk = self.model["ledgers"]["UK"]
+        ppe_cost = sum(
+            (p.amount_gbp for p in uk.postings if p.group_account == "1500"), D(0)
+        )
+        ppe_dep = sum(
+            (p.amount_gbp for p in uk.postings if p.group_account == "1510"), D(0)
+        )
+        self.assertEqual(q2(ppe_cost), D("2900000.00"))
+        self.assertEqual(q2(ppe_dep), D("-1082000.00"))
+
+    def test_uk_deferred_income_corrected_to_2300(self):
+        # The supplied map sent 2310 Deferred income to 4100 Revenue.
+        corrections = self.model["mapping"].corrections
+        self.assertTrue(
+            any(
+                c["entity"] == "UK"
+                and c["local_code"] == "2310"
+                and c["corrected_to"] == "2300"
+                for c in corrections
+            )
+        )
+        uk = self.model["ledgers"]["UK"]
+        deferred = sum(
+            (p.amount_gbp for p in uk.postings if p.group_account == "2300"), D(0)
+        )
+        self.assertEqual(q2(deferred), D("-180000.00"))
+
+    def test_je006_is_rejected_and_injection_is_flagged(self):
+        je006 = next(j for j in self.model["journals"] if j.journal_id == "JE-006")
+        self.assertEqual(je006.status, "rejected")
+        ids = {i["id"] for i in self.model["issues"].all()}
+        self.assertIn("SEC-JE-006", ids)
+        self.assertIn("JE-JE-006", ids)
+
+    def test_intercompany_7300_is_a_credit(self):
+        # Eliminating IC income of 500,782.47 against IC expense of
+        # 498,816.26 leaves a 1,966.21 credit to 7300, not an expense.
+        elim = next(e for e in self.result.eliminations if e.elim_id == "ELIM-02")
+        line_7300 = next(line for line in elim.lines if line.group_account == "7300")
+        self.assertEqual(q2(line_7300.credit_gbp), D("1966.21"))
+        self.assertEqual(q2(self.result.group_pnl["7300"]), D("9991.67"))
+
+    def test_translation_reserve_decomposition_matches_residual(self):
+        workings = self.result.translation_workings
+        self.assertEqual(
+            q2(workings["us_parent_operating_net_assets"]), D("154486.87")
+        )
+        self.assertLess(
+            abs(workings["analytical_total"] - workings["balance_sheet_residual"]),
+            D("0.02"),
+        )
+
+    def test_india_pnl_is_h2_only(self):
+        india = self.model["ledgers"]["IN"]
+        h2_refs = [p.source_ref for p in india.postings if p.source_type == "INDIA_H2"]
+        self.assertTrue(h2_refs)
+        self.assertFalse(
+            any(
+                month in ref
+                for ref in h2_refs
                 for month in ("2024-04", "2024-05", "2024-06")
             )
         )
