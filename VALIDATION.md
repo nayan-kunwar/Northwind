@@ -72,7 +72,8 @@ Manual cross-checks of the most sensitive figures:
 
 ## 3. What the AI got wrong, and the commits that fixed it
 
-The full transcript is in `transcripts/`. These are the substantive corrections. The
+The full machine export is in `transcripts/full/` (five parts plus an index); the curated
+narrative is `transcripts/session-01.md`. These are the substantive corrections. The
 engine fixes are in commit **`81ba780`**; the regression tests that lock them are in
 commit **`1782fe3`**.
 
